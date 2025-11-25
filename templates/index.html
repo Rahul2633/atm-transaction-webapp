@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🏧 ATM Machine</h1>
+
+    <form method="POST">
+        <input type="password" name="pin" placeholder="Enter PIN" required>
+        <input type="number" name="amount" placeholder="Enter Amount (optional)">
+
+        <button name="action" value="deposit">Deposit</button>
+        <button name="action" value="withdraw">Withdraw</button>
+        <button name="action" value="balance">Check Balance</button>
+    </form>
+
+    {% if message %}
+        <p class="result">{{ message }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
